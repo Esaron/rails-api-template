@@ -1,5 +1,5 @@
 class Api::V1::ResourcesController < ApplicationController
-  before_action :find_resource, only: [:show, :update]
+  before_action :find_resource, only: [:show, :update, :destroy]
 
   def index
     @resources = Resource.all
@@ -11,17 +11,21 @@ class Api::V1::ResourcesController < ApplicationController
   end
 
   def create
-    @resource = Resource.create!(upsert_params)
-    render json: @resource
+    @resource = Resource.new(resource_params)
+    if @resource.save
+      render json: @resource
+    else
+      render json: { errors: @resource.errors.full_messages }, status: 400
+    end
   end
 
   def update
-    @resource.update!(upsert_params)
+    @resource.update!(resource_params)
     render json: @resource
   end
 
   def destroy
-    Resource.destroy_by(params[:id])
+    @resource.destroy!
     head :no_content
   end
 
@@ -31,7 +35,7 @@ class Api::V1::ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
   end
 
-  def upsert_params
+  def resource_params
     params.permit(:name)
   end
 end
