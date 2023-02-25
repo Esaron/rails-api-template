@@ -1,0 +1,33 @@
+current directory: /Users/jmarshall/git/rails_api_template/vendor/bundle/ruby/3.2.0/gems/msgpack-1.6.0/ext/msgpack
+/Users/jmarshall/.rbenv/versions/3.2.1/bin/ruby -I /Users/jmarshall/.rbenv/versions/3.2.1/lib/ruby/3.2.0 extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... no
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/jmarshall/git/rails_api_template/vendor/bundle/ruby/3.2.0/gems/msgpack-1.6.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230225-16844-71pn8g sitelibdir\=./.gem.20230225-16844-71pn8g clean
+
+current directory: /Users/jmarshall/git/rails_api_template/vendor/bundle/ruby/3.2.0/gems/msgpack-1.6.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230225-16844-71pn8g sitelibdir\=./.gem.20230225-16844-71pn8g
+compiling buffer.c
+compiling buffer_class.c
+compiling extension_value_class.c
+compiling factory_class.c
+compiling packer.c
+compiling packer_class.c
+compiling packer_ext_registry.c
+compiling rbinit.c
+compiling rmem.c
+compiling unpacker.c
+compiling unpacker_class.c
+compiling unpacker_ext_registry.c
+linking shared-object msgpack/msgpack.bundle
+
+current directory: /Users/jmarshall/git/rails_api_template/vendor/bundle/ruby/3.2.0/gems/msgpack-1.6.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230225-16844-71pn8g sitelibdir\=./.gem.20230225-16844-71pn8g install
+/usr/local/bin/ginstall -c -m 0755 msgpack.bundle ./.gem.20230225-16844-71pn8g/msgpack
+
+current directory: /Users/jmarshall/git/rails_api_template/vendor/bundle/ruby/3.2.0/gems/msgpack-1.6.0/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230225-16844-71pn8g sitelibdir\=./.gem.20230225-16844-71pn8g clean
