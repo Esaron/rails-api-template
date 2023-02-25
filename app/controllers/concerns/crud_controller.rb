@@ -15,7 +15,7 @@ module CrudController
   end
 
   def create
-    @resource = resource_class.new(resource_params)
+    @resource = resource_class.new(create_params)
     if @resource.save
       render json: @resource
     else
@@ -24,7 +24,7 @@ module CrudController
   end
 
   def update
-    @resource.update!(resource_params)
+    @resource.update!(update_params)
     render json: @resource
   end
 
@@ -34,6 +34,14 @@ module CrudController
   end
 
   private
+
+  def create_params
+    resource_params
+  end
+
+  def update_params
+    resource_params
+  end
 
   def find_resource
     @resource = resource_class.find(params[:id])
