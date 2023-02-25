@@ -15,7 +15,11 @@ rails db:setup
 rails s
 ```
 
-## Getting a token for the demo admin user
+## Requests
+
+In the root of the repository, you can find an [Insomnia](https://insomnia.rest/) [export](https://github.com/Esaron/rails-api-template/blob/main/rails-api-template.json)
+
+### Getting a token for the demo admin user
 
 ```
 curl --request POST \
@@ -31,7 +35,7 @@ curl --request POST \
 {"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzc0Mzc5Mzl9.G8cD4sBYLcsGbFhdHwHdD9YamWJPpRF0LCxR_YkuOwI","exp":"2023-02-26T18:58:59.281Z","user_name":"admin"}
 ```
 
-## Using the token
+### Using the token
 
 ```
 curl --request GET \
